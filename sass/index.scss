@@ -1,0 +1,31 @@
+// variables & functions
+@import 'functions';
+@import 'variables';
+
+// base & layout
+@import 'base';
+@import 'breakpoints';
+@import 'grid';
+
+// colors
+@import "colors";
+
+// components (button, card, navbar etc)
+@import 'components/card';
+@import 'components/button';
+@import 'components/navbar';
+@import 'components/accordian';
+@import 'components/tabs';
+@import 'components/carosel';
+@import 'components/progress';
+@import 'components/spinner';
+@import 'components/tooltip';
+@import 'components/badge';
+@import 'components/pagination';
+@import 'components/img';
+@import 'components/footer';
+@import 'components/table';
+@import 'components/form';
+@import 'components/border';
+// utilities (margin, padding, opacity, etc)
+@import 'utilities';

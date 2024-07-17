@@ -1,0 +1,917 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Complete SASS</title>
+    <style>
+      .example-box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+        background-color: #f8f9fa;
+      }
+      .box {
+        width: 150px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="text-center">
+      <h2>Text Colors</h2>
+      <p class="text-primary">This text is primary.</p>
+      <p class="text-secondary">This text is secondary.</p>
+      <p class="text-error">This text indicates an error.</p>
+      <p class="text-info">This text provides information.</p>
+      <p class="text-blue">This text is blue.</p>
+      <p class="text-red">This text is red.</p>
+      <p class="text-yellow">This text is yellow.</p>
+      <p class="text-green">This text is green.</p>
+      <p class="text-orange">This text is orange.</p>
+      <p class="text-purple">This text is purple.</p>
+      <p class="text-gray">This text is gray.</p>
+      <p class="text-black">This text is black.</p>
+      <p class="text-white bg-black">This text is white on black.</p>
+    </div>
+
+    <br /><br /><br />
+
+    <h2>Background Colors</h2>
+    <div class="bg-primary text-white p-1">Primary background</div>
+    <div class="bg-secondary text-white p-1">Secondary background</div>
+    <div class="bg-error text-white p-1">Error background</div>
+    <div class="bg-info text-white p-1">Info background</div>
+    <div class="bg-blue text-white p-1">Blue background</div>
+    <div class="bg-red text-white p-1">Red background</div>
+    <div class="bg-yellow text-black p-1">Yellow background</div>
+    <div class="bg-green text-white p-1">Green background</div>
+    <div class="bg-orange text-white p-1">Orange background</div>
+    <div class="bg-purple text-white p-1">Purple background</div>
+    <div class="bg-gray text-white p-1">Gray background</div>
+    <div class="bg-black text-white p-1">Black background</div>
+    <div class="bg-white text-black p-1">White background</div>
+
+    <br /><br /><br />
+    <h2>Hover Text Colors</h2>
+    <div class="text-hover-primary p-3">Hover over me (Primary)</div>
+    <div class="text-hover-secondary p-3">Hover over me (Secondary)</div>
+    <div class="text-hover-error p-3">Hover over me (Error)</div>
+    <div class="text-hover-info p-3">Hover over me (Info)</div>
+    <div class="text-hover-blue p-3">Hover over me (Blue)</div>
+    <div class="text-hover-red p-3">Hover over me (Red)</div>
+    <div class="text-hover-yellow p-3">Hover over me (Yellow)</div>
+    <div class="text-hover-green p-3">Hover over me (Green)</div>
+    <div class="text-hover-orange p-3">Hover over me (Orange)</div>
+    <div class="text-hover-purple p-3">Hover over me (Purple)</div>
+    <div class="text-hover-gray p-3">Hover over me (Gray)</div>
+    <div class="text-hover-black p-3">Hover over me (Black)</div>
+    <div class="text-hover-white p-3" style="background-color: #000">
+      Hover over me (White)
+    </div>
+
+    <br /><br /><br />
+
+    <h2>Hover Text Color Light Variations</h2>
+    <p>Hover over each element to see the hover effect:</p>
+
+    <div class="text-hover-primary-light-1">
+      Primary Text (Light Variation 1)
+    </div>
+    <div class="text-hover-primary-light-2">
+      Primary Text (Light Variation 2)
+    </div>
+    <div class="text-hover-primary-light-3">
+      Primary Text (Light Variation 3)
+    </div>
+
+    <div class="text-hover-secondary-light-1">
+      Secondary Text (Light Variation 1)
+    </div>
+    <div class="text-hover-secondary-light-2">
+      Secondary Text (Light Variation 2)
+    </div>
+    <div class="text-hover-secondary-light-3">
+      Secondary Text (Light Variation 3)
+    </div>
+    <br /><br /><br />
+
+    <span class="border example-box border-primary"></span>
+    <span class="border example-box border-primary-subtle"></span>
+    <span class="border example-box border-secondary"></span>
+    <span class="border example-box border-secondary-subtle"></span>
+    <span class="border example-box border-success"></span>
+    <span class="border example-box border-success-subtle"></span>
+    <br />
+    <span class="border example-box border-danger"></span>
+    <span class="border example-box border-danger-subtle"></span>
+    <span class="border example-box border-warning"></span>
+    <span class="border example-box border-warning-subtle"></span>
+    <span class="border example-box border-info"></span>
+    <span class="border example-box border-info-subtle"></span>
+    <br />
+    <span class="border example-box border-light"></span>
+    <span class="border example-box border-light-subtle"></span>
+    <span class="border example-box border-dark"></span>
+    <span class="border example-box border-dark-subtle"></span>
+    <span class="border example-box border-black"></span>
+    <span class="border example-box border-white"></span>
+
+    <br /><br /><br />
+    <span class="border example-box example-box">Border</span>
+    <span class="border example-box border-0 example-box">No Border</span>
+    <span class="border example-box border-top-0 example-box">No Top</span>
+    <span class="border example-box border-end-0 example-box">No End</span>
+    <span class="border example-box border-bottom-0 example-box"
+      >No Bottom</span
+    >
+    <span class="border example-box border-start-0 example-box">No Start</span>
+    <br />
+    <span class="border"></span>
+    <span class="border-top"></span>
+    <span class="border-end"></span>
+    <span class="border-bottom"></span>
+    <span class="border-start"></span>
+    <br /><br /><br />
+    <span class="border example-box border-0"></span>
+    <span class="border example-box border-top-0"></span>
+    <span class="border example-box border-end-0"></span>
+    <span class="border example-box border-bottom-0"></span>
+    <span class="border example-box border-start-0"></span>
+    <br /><br /><br />
+
+    <div class="container">
+      <div class="example-box float-left">Float Left</div>
+      <div class="example-box float-none">No Float</div>
+      <div class="example-box float-right">Float Right</div>
+    </div>
+
+    <br /><br /><br />
+    <h3 class="text-center">This text is centered.</h3>
+    <h3 class="text-left">This text is aligned left.</h3>
+    <h3 class="text-right">This text is aligned right.</h3>
+    <h3 class="text-justify">
+      This text is justified to spread evenly across the line.
+    </h3>
+
+    <!-- Text Transformation -->
+    <h3 class="text-capitalize">this text is capitalized.</h3>
+    <h3 class="text-uppercase">this text is uppercase.</h3>
+    <h3 class="text-lowercase">THIS TEXT IS LOWERCASE.</h3>
+
+    <!-- Text Weight -->
+    <h3 class="text-bold">This text is bold.</h3>
+    <h3 class="text-normal">This text is normal weight.</h3>
+
+    <!-- Text Style -->
+    <h3 class="text-italic">This text is italic.</h3>
+
+    <!-- Text Decoration -->
+    <h3 class="text-underline">This text is underlined.</h3>
+    <h3 class="text-line-through">This text has a line through it.</h3>
+    <h3 class="text-overline">This text has a line over it.</h3>
+    <h3 class="text-line-overline-through">
+      This text has lines over and through it.
+    </h3>
+    <br /><br /><br />
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/">
+            <img
+              src="https://badgecraft.online/assets/Badge-DPK_GDWB.png"
+              alt="gfg_logo"
+            />
+          </a>
+        </div>
+        <div class="hamburger-menu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+        <div class="nav-menu bg-white hide">
+          <!-- <a href="#" class="active">Home</a> -->
+          <a href="#" class="text-white">Home</a>
+          <a href="#" class="text-white">Career</a>
+          <a href="#" class="text-white">About</a>
+          <a href="#" class="text-white">Contact</a>
+          <!-- <a href="#" class="disabled">Contact</a> -->
+        </div>
+      </div>
+    </nav>
+    <br /><br />
+    <ul class="tabs">
+      <li class="tabs-item">
+        <a class="tabs-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="tabs-item">
+        <a class="tabs-link" href="#">Link</a>
+      </li>
+      <li class="tabs-item">
+        <a class="tabs-link" href="#">Link</a>
+      </li>
+      <li class="tabs-item">
+        <a class="tabs-link disabled" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    <div class="container">
+      <!-- colors -->
+      <h2 class="mb-2">Colors</h2>
+      <span class="text-primary">primary text</span> |
+      <span class="text-secondary">secondary text</span> |
+      <span class="text-error">error text</span> |
+      <span class="text-info">info text</span> |
+      <span class="text-blue">blue text</span> |
+      <span class="text-red">red text</span> |
+      <span class="text-green">green text</span> |
+      <span class="text-yellow">yellow text</span> |
+      <span class="text-purple">purple text</span> |
+      <span class="text-orange">orange text</span> |
+      <span class="text-gray">gray text</span>
+
+      <br /><br />
+
+      <span class="bg-primary text-white">bg primary</span> |
+      <span class="bg-secondary text-white">bg secondary</span> |
+      <span class="bg-error text-white">bg error</span> |
+      <span class="bg-info text-white">bg info</span> |
+      <span class="bg-blue text-white">bg blue</span> |
+      <span class="bg-red text-white">bg red</span> |
+      <span class="bg-green text-white">bg green</span> |
+      <span class="bg-yellow text-white">bg yellow</span> |
+      <span class="bg-purple text-white">bg purple</span> |
+      <span class="bg-orange text-white">bg orange</span> |
+      <span class="bg-gray text-white">bg gray</span> |
+
+      <br /><br />
+
+      <span class="bg-primary-dark-8 text-white">primary dark 8</span> |
+      <span class="bg-primary-dark-6 text-white">primary dark 6</span> |
+      <span class="bg-primary-dark-4 text-white">primary dark 4</span> |
+      <span class="bg-primary-dark-2 text-white">primary dark 2</span> |
+      <span class="bg-primary text-white">primary</span> |
+      <span class="bg-primary-light-2 text-white">primary light 2</span> |
+      <span class="bg-primary-light-4 text-white">primary light 4</span> |
+      <span class="bg-primary-light-6 text-white">primary light 6</span> |
+      <span class="bg-primary-light-8 text-white">primary light 8</span> |
+
+      <br /><br />
+      <a href="#" class="text-primary text-hover-orange-light-1">hover me</a>
+
+      <hr class="mt-4 mb-4" />
+
+      <!-- font sizes -->
+      <h2 class="mb-2">Font Sizes</h2>
+      <div class="font-sm">this is small font</div>
+      <div class="font-md">this is medium font</div>
+      <div class="font-lg">this is large font</div>
+      <div class="font-xl">this is extra large font</div>
+      <div class="font-xxl">this is extra, extra large font</div>
+
+      <hr class="mt-4 mb-4" />
+
+      <!-- buttons -->
+      <h2 class="mb-2">Buttons</h2>
+      <a href="#" class="btn">default btn</a>
+      <a href="#" class="btn-primary text-white">click me</a>
+      <a href="#" class="btn-secondary text-white">click me</a>
+      <a href="#" class="btn-error text-white">click me</a>
+      <a href="#" class="btn-info">click me</a>
+      <a href="#" class="btn-outlined-purple text-purple text-hover-white"
+        >click me</a
+      >
+      <a href="#" class="btn-outlined-orange text-orange text-hover-white"
+        >click me</a
+      >
+      <a href="#" class="btn-complement-purple">click me</a>
+      <a href="#" class="btn-complement-primary">click me</a>
+
+      <h2 class="mb-2 mt-4">Button Groups</h2>
+      <div class="btn-group">
+        <a href="#" class="btn-outlined-orange text-orange text-hover-white"
+          >btn 1</a
+        >
+        <a href="#" class="btn-outlined-orange text-orange text-hover-white"
+          >btn 2</a
+        >
+        <a href="#" class="btn-outlined-orange text-orange text-hover-white"
+          >btn 3</a
+        >
+      </div>
+      <div class="btn-group">
+        <a href="#" class="btn-primary text-white">btn 1</a>
+        <a href="#" class="btn-secondary text-white">btn 2</a>
+        <a href="#" class="btn-primary text-white">btn 3</a>
+      </div>
+      <hr class="mt-4 mb-4" />
+
+      <!-- cards -->
+      <h2 class="mb-2">Cards</h2>
+      <div class="card">
+        <h1 class="card-title">This is a title</h1>
+        <p class="card-body">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo
+          totam aliquam praesentium ducimus tempore sapiente quia nulla optio?
+          Lorem ipsum, dolor sit amet consectetur
+          <a href="">adipisicing elit</a>. Libero laboriosam laborum
+          exercitationem autem commodi voluptas odio aliquid ut velit doloremque
+          minima, quaerat dolores, corporis consequuntur totam nam id veniam
+          maxime.
+        </p>
+      </div>
+
+      <hr class="mt-4 mb-4" />
+
+      <!-- grid system -->
+      <h2 class="mb-2">Grid System</h2>
+      <div class="row gap-2 justify-center">
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt=""
+            />
+            <h3 class="card-title p-2">A Disappearing Art:</h3>
+            <p class="card-body">Bookplates and Hong Kong</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt=""
+            />
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt=""
+            />
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt=""
+            />
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt-4 mb-4" />
+
+      <!-- utilities -->
+      <h2>Using Utilities</h2>
+      <div class="mt-2 text-orange-dark-2 bg-orange-light-5 p-2 br-xs">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+          perspiciatis!
+        </p>
+      </div>
+      <div class="mt-2 text-secondary-dark-2 bg-secondary-light-5 p-2 br-lg">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+          perspiciatis!
+        </p>
+      </div>
+      <div class="display-i-b bg-purple text-white o-10 mt-3 mr-3 p-2">
+        opacity 10
+      </div>
+      <div class="display-i-b bg-purple text-white o-30 mt-3 mr-3 p-2">
+        opacity 30
+      </div>
+      <div class="display-i-b bg-purple text-white o-50 mt-3 mr-3 p-2">
+        opacity 50
+      </div>
+      <div class="display-i-b bg-purple text-white o-70 mt-3 mr-3 p-2">
+        opacity 70
+      </div>
+      <div class="display-i-b bg-purple text-white o-90 mt-3 mr-3 p-2">
+        opacity 90
+      </div>
+
+      <hr class="mt-4 mb-4" />
+      <h2 class="mt-4 mb-2">Accordian</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header bg-black">
+            <button
+              class="accordion-button text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body bg-black text-white">
+              <strong>This is the second item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        id="carousel-1"
+        class="carousel"
+        role="region"
+        aria-labelledby="carousel-1-title"
+      >
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <h3 id="carousel-1-slide-1-title">Nanda Kot peak</h3>
+              <p>Mukteshwar, Uttarakhand</p>
+            </div>
+
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt="Nanda Kot peak"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-2-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <h3 id="carousel-1-slide-2-title">Manali Mountains</h3>
+              <p>Manali, Himachal Pradesh</p>
+            </div>
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt="Manali Mountains"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-3-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <h3 id="carousel-1-slide-3-title">Aotearoa</h3>
+              <p>New Zealand</p>
+            </div>
+
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt="Aotearoa"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-4-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <h3 id="carousel-1-slide-4-title">Richmond Park</h3>
+              <p>London, England</p>
+            </div>
+
+            <img
+              src="https://storage.lib.hkbu.edu.hk/projects/bookplate/KATH-002.jpg"
+              alt="London’s Richmond Park"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5"></div>
+      <progress class="custom-progress-red" value="22" max="100"></progress>
+      <div class="progress-group">
+        <progress class="custom-progress-red" value="22" max="100"></progress>
+        <progress class="custom-progress-black" value="22" max="100"></progress>
+        <progress class="custom-progress" value="22" max="100"></progress>
+        <progress class="custom-progress" value="22" max="100"></progress>
+        <progress class="custom-progress" value="22" max="100"></progress>
+      </div>
+    </div>
+    <div class="mt-5"></div>
+
+    <div class="loader"></div>
+
+    <div class="loader-red"></div>
+
+    <div class="loader loader-medium loader-blue"></div>
+    <div class="loader loader-large loader-green"></div>
+    <br /><br /><br />
+    <div class="loader loader-small loader-red"></div>
+    <br /><br /><br />
+    <div class="loader loader-medium loader-blue loader-fast"></div>
+    <div class="loader loader-large loader-green loader-normal"></div>
+    <div class="loader loader-small loader-red loader-slow"></div>
+
+    <div class="tooltip">
+      Hover over me
+      <span class="tooltiptext-bottom bg-red">text btm</span>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="tooltip">
+      Hover over me
+      <span class="tooltiptext-top">Text top</span>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="tooltip">
+      Hover over me
+      <span class="tooltiptext-right">Text right</span>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="text-center">
+      <div class="tooltip">
+        Hover over me
+        <span class="tooltiptext-left">Text left</span>
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+      <span class="badge text-bg-primary">Primary</span>
+      <span class="badge text-bg-secondary">Secondary</span>
+      <span class="badge text-bg-success">Success</span>
+      <span class="badge text-bg-danger">Danger</span>
+      <span class="badge text-bg-warning">Warning</span>
+      <span class="badge text-bg-info">Info</span>
+      <span class="badge text-bg-light">Light</span>
+      <span class="badge text-bg-dark">Dark</span>
+    </div>
+    <br /><br /><br />
+    <!-- Example single danger button -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+    <br /><br />
+    <img
+      class="img-fluid"
+      src="data:image/jpeg;base64,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"
+      alt=""
+      srcset=""
+    />
+    <div class="mt-5"></div>
+    <img
+      class="float-center"
+      src="data:image/jpeg;base64,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"
+      alt=""
+      srcset=""
+    />
+    <br /><br />
+    <footer class="p-4 footer-black">
+      <div class="flex">
+        <section class="flex-content p-1">
+          <h3>Top Products</h3>
+          <a href="#">Managed Website</a>
+          <a href="#">Manage Reputation</a>
+          <a href="#">Power Tools</a>
+          <a href="#">Marketing Service</a>
+        </section>
+        <section class="flex-content p-1">
+          <h3>Quick Links</h3>
+          <a href="#">Jobs</a>
+          <a href="#">Brand Assets</a>
+          <a href="#">Investor Relations</a>
+          <a href="#">Terms of Service</a>
+        </section>
+        <section class="flex-content p-1">
+          <h3>Features</h3>
+          <a href="#">Jobs</a>
+          <a href="#">Brand Assets</a>
+          <a href="#">Investor Relations</a>
+          <a href="#">Terms of Service</a>
+        </section>
+        <section class="flex-content p-1">
+          <h3>Resources</h3>
+          <a href="#">Guides</a>
+          <a href="#">Research</a>
+          <a href="#">Experts</a>
+          <a href="#">Agencies</a>
+        </section>
+        <section class="flex-content p-1">
+          <h3>Newsletter</h3>
+          <p>You can trust us. we only send promo offers,</p>
+          <fieldset class="fixed_flex">
+            <input
+              type="email"
+              name="newsletter"
+              placeholder="Your Email Address"
+            />
+            <button class="btn btn-red">Subscribe</button>
+          </fieldset>
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex-content p-1">
+          <p>Copyright ©2023 All rights reserved || website name</p>
+        </section>
+        <section class="flex-content p-1">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+        </section>
+      </div>
+    </footer>
+
+    <h1 class="mt-3">A Fancy Table</h1>
+    <div class="container">
+      <div class="responsive mt-3 mb-4">
+        <table class="table-black table">
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="container">
+      <form method="post" action="">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="username"
+          name="email"
+          value="nishikantaray1@gmail.com readonlyyy"
+          autocomplete="off"
+          readonly
+        />
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Type in your username.."
+          autocomplete="off"
+          disabled
+        />
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Type in your username.."
+          autocomplete="off"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="username"
+          name="email"
+          placeholder="Type in your email.."
+          autocomplete="off"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password.."
+          autocomplete="off"
+          required
+        />
+        <label for="textarea">Text area</label>
+        <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="file">upload your file</label>
+        <input type="file" id="file" name="file" required />
+        <label for="file">colour</label>
+        <input type="color" id="colour" name="colour" required />
+        <input
+          list="datalistOptions"
+          id="exampleDataList"
+          placeholder="Type to search..."
+        />
+        <datalist id="datalistOptions">
+          <option value="San Francisco"></option>
+          <option value="New York"></option>
+          <option value="Seattle"></option>
+          <option value="Los Angeles"></option>
+          <option value="Chicago"></option>
+        </datalist>
+
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox
+        </label>
+        <input type="checkbox" value="" id="flexCheckDefault" />
+
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox
+        </label>
+        <input type="checkbox" value="" id="flexCheckDefault" checked />
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox
+        </label>
+        <input type="checkbox" value="" id="flexCheckDefault" disabled />
+        <label for="flexCheckDefault"> Default checkbox </label>
+        <input
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+          disabled
+          checked
+        />
+
+        <label for="flexCheckDefault"> Default checkbox </label>
+        <input type="radio" value="" id="flexCheckDefault" />
+
+        <input type="radio" value="" id="flexCheckDefault" checked />
+        <input type="radio" value="" id="flexCheckDefault" checked disabled />
+        <input type="checkbox" value="" id="flexCheckDefault" role="switch" />
+        <input type="range" class="form-range" id="customRange1" />
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

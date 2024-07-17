@@ -1,0 +1,40 @@
+$accordion-heading-bg: #e0e0e0;
+@use "sass:math";
+.accordion {
+  .accordion-item {
+    border: $base-border-thickness solid #ddd;
+    border-radius: math.div($base-border-radius, 4);
+
+    &:not(:last-child) {
+      margin-bottom: $base-margin;
+    }
+
+    .accordion-header {
+      padding: 10px 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($accordion-heading-bg, 5%);
+      }
+
+      .accordion-button {
+        border: none;
+        background: none;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    .accordion-body {
+      padding: 15px;
+      border-top: $base-border-thickness solid #ddd;
+      display: none;
+    }
+
+    &.active {
+      .accordion-body {
+        display: block;
+      }
+    }
+  }
+}

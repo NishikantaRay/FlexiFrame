@@ -1,0 +1,71 @@
+form label {
+  font-size: 14px;
+  color: darkgray;
+  cursor: pointer;
+}
+
+form label,
+form input {
+  float: left;
+  clear: both;
+}
+
+form input,
+textarea,
+select,
+option,
+input[type="range"] {
+  margin: 15px 0;
+  padding: 15px 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: cornflowerblue;
+}
+
+form input[type="file"]::file-selector-button {
+  border: none;
+}
+
+form input[type="color"] {
+  width: 40px;
+  height: 40px;
+}
+
+form input[type="color"]::-webkit-color-swatch-wrapper {
+  width: 20px;
+  height: 20px;
+}
+
+form input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bbb;
+}
+
+form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bbb;
+}

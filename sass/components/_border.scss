@@ -1,0 +1,48 @@
+.border {
+  border: $border-width $border-style $border-color;
+  border-style: solid;
+  border-width: 1px;
+}
+.border-0 {
+  border: none;
+}
+.border-top {
+  border-top: $border-width $border-style $border-color;
+}
+.border-top-0 {
+  border-top: none;
+}
+
+.border-end {
+  border-right: $border-width $border-style $border-color;
+}
+
+.border-end-0 {
+  border-right: none;
+}
+
+.border-bottom {
+  border-bottom: $border-width $border-style $border-color;
+}
+
+.border-bottom-0 {
+  border-bottom: none;
+}
+
+.border-start {
+  border-left: $border-width $border-style $border-color;
+}
+
+.border-start-0 {
+  border-left: none;
+}
+
+@each $name, $color in $colors {
+  .border-#{$name} {
+    border-color: $color;
+  }
+
+  .border-#{$name}-subtle {
+    border-color: rgba($color, $subtle-opacity);
+  }
+}

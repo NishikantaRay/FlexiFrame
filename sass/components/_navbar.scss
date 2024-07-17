@@ -1,0 +1,143 @@
+%flex-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.navbar {
+  .hamburger-menu .line {
+    background-color: white;
+  }
+  .nav-menu {
+    a {
+      color: black;
+      &.active,
+      &:hover {
+        background-color: darken(grey, 10%);
+        color: white;
+      }
+    }
+  }
+  .navbar {
+    @extend %flex-layout;
+    border-bottom: $base-box-shadow;
+    padding: $base-padding $base-padding * 2;
+    background-color: #f8f9fa; // Default background color
+    color: #212529; // Default text color
+  }
+
+  .navbar-brand img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .hamburger-menu {
+    cursor: pointer;
+
+    .line {
+      display: block;
+      width: 2.5rem;
+      height: 2px;
+      margin-bottom: 10px;
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    @extend %flex-layout;
+  }
+
+  .nav-menu {
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 5px 0;
+
+      &.active,
+      &:hover {
+        background-color: gray;
+        color: #f8f9fa;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-around;
+
+    .nav-menu {
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+
+      a {
+        display: inline-block;
+        padding: 15px 20px;
+
+        &.active,
+        &:hover {
+          background-color: gray;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .container {
+      @extend %flex-layout;
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+
+    @if $val == black {
+      color: white;
+
+      .hamburger-menu .line {
+        background-color: white;
+      }
+
+      .nav-menu {
+        background-color: $val;
+
+        a {
+          color: white;
+
+          &.active,
+          &:hover {
+            background-color: darken(grey, 10%);
+            color: white;
+          }
+        }
+      }
+    } @else {
+      .nav-menu a {
+        color: inherit;
+      }
+    }
+  }
+}

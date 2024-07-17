@@ -1,0 +1,96 @@
+$tooltip-background: black;
+$tooltip-color: #fff;
+$tooltip-width: 120px;
+$tooltip-padding: 5px 0;
+$tooltip-border-radius: 6px;
+$tooltip-transition: opacity 1s;
+@use "sass:math";
+
+@mixin tooltip-text-layout($background-color: null) {
+    $final-background-color: if($background-color, $background-color, $tooltip-background);
+    $tooltip-color: if(lightness($final-background-color) > 50%, $tooltip-background, $tooltip-color);
+    visibility: hidden;
+    width: $tooltip-width;
+    background-color: $final-background-color;
+    color: $tooltip-color;
+    text-align: center;
+    border-radius: $tooltip-border-radius;
+    padding: $tooltip-padding;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: $tooltip-transition;
+
+    &::after {
+        content: "";
+        position: absolute;
+        opacity: 1;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    .tooltiptext-bottom {
+        @include tooltip-text-layout;
+        top: 100%;
+        left: 50%;
+        margin-left: - math.div($tooltip-width, 2);
+
+        &::after {
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent $tooltip-background transparent;
+        }
+    }
+
+    .tooltiptext-top {
+        @include tooltip-text-layout;
+        bottom: 100%;
+        left: 50%;
+        margin-left: - math.div($tooltip-width, 2);
+
+        &::after {
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $tooltip-background transparent transparent transparent;
+        }
+    }
+
+    .tooltiptext-right,
+    .tooltiptext-left {
+        @include tooltip-text-layout;
+        top: -5px;
+
+        &::after {
+            top: 50%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent $tooltip-background transparent transparent;
+        }
+    }
+
+    .tooltiptext-right {
+        left: 110%;
+    }
+
+    .tooltiptext-left {
+        right: 110%;
+    }
+
+    &:hover .tooltiptext-left,
+    &:hover .tooltiptext-right,
+    &:hover .tooltiptext-top,
+    &:hover .tooltiptext-bottom {
+        visibility: visible;
+        opacity: 1;
+    }
+}

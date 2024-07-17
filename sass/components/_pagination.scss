@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  .page-item {
+    &.disabled {
+      .page-link {
+        pointer-events: none;
+        color: #6c757d;
+        background-color: #fff;
+        border-color: #dee2e6;
+      }
+    }
+
+    .page-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #007bff;
+      border: 1px solid #000;
+
+      &:hover {
+        z-index: 2;
+        color: #0056b3;
+        text-decoration: none;
+        background-color: #e9ecef;
+        border-color: #dee2e6;
+      }
+    }
+  }
+}
+
+@each $key, $val in $colors {
+  .page-item {
+    .page-link-#{$key} {
+      @extend .page-link;
+      z-index: 1;
+      color: #fff;
+      background-color: $val;
+      border-color: $val;
+    }
+  }
+}

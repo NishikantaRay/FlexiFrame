@@ -1,0 +1,67 @@
+%loader-default {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@each $speed in normal, fast, slow {
+  .loader-#{$speed} {
+    @extend %loader-default;
+    @if $speed == fast {
+      animation-duration: 1s;
+    } @else if $speed == slow {
+      animation-duration: 3s;
+    }
+  }
+}
+
+@each $size in small, medium, large {
+  .loader-#{$size} {
+    @extend %loader-default;
+    @if $size == small {
+      width: 30px;
+      height: 30px;
+    } @else if $size == medium {
+      width: 60px;
+      height: 60px;
+    } @else if $size == large {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.loader {
+  @extend %loader-default;
+  border-top: 16px solid #3498db;
+}
+
+@each $key, $val in $colors {
+  .loader-#{$key} {
+    @extend .loader;
+    border-top: 16px solid $val;
+  }
+}
